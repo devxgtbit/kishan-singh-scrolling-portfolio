@@ -66,7 +66,7 @@ export function Services() {
       <SectionTitle kicker="02 / What I do" title="What I" accent="do" />
       <div className="mt-12 grid gap-6 md:grid-cols-2">
         {services.map((service, i) => {
-          const Icon = SERVICE_ICONS[i];
+          const Icon: LucideIcon = SERVICE_ICONS[i] ?? Layers;
           return (
             <Reveal key={service.title} delay={i * 0.07} rotate={i % 2 ? 1 : -1}>
               <article
